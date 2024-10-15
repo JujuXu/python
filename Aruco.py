@@ -1,3 +1,7 @@
+#numpy         2.1.2
+#opencv-python 4.10.0.84
+#pip           24.2
+
 import cv2
 import cv2.aruco as aruco
 
@@ -31,8 +35,9 @@ while True:
                 print("> "+str(i[0]))
         cv2.imshow('Aruco Visualisation', frame) # display frame
 
+    # pressing this key exits the loop
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-cap.release()
-cv2.destroyAllWindows()
+cap.release() # release the webcam, close it to be opened by other apps
+cv2.destroyAllWindows() # close windows from cv2
